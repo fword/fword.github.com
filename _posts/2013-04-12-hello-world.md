@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Hello World"
-description: ""
+description: "this is my first blog,
+I want to say hello to you guys"
 category: 
 tags: []
 ---
