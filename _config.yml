@@ -10,14 +10,14 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Max's Blog
-tagline: Site Tagline
+tagline: Max's Blog
 author :
   name : max
   email : 657426795@qq.test
   github : fword
-  twitter : username
-  weibo:username
-  feedburner : feedname
+  twitter : dd
+  weibo:dd
+  feedburner : dd
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
