@@ -2,9 +2,8 @@
 title: UNIX网络编程读书笔记
 author: admin
 layout: post
-permalink: /?p=582
-categories:
-  - 未分类
+category: 
+tags: []
 ---
 # 
 
