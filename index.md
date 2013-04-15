@@ -23,7 +23,7 @@ The theme should reference these variables whenever needed.
 	<a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-{% endfor %}
+
 
 
 
