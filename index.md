@@ -6,7 +6,7 @@ tagline: Supporting tagline
 {% include JB/setup %}
 
 
-![d](/assets/images/p.jpg)   
+  
 <img src="/assets/images/p.jpg" width="700" height="432">
 
 
