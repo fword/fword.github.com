@@ -6,7 +6,7 @@ tagline: Supporting tagline
 {% include JB/setup %}
 
 
-![pic](/assets/images/2.jpg)
+
 	บวบว
 
 
