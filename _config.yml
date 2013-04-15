@@ -12,10 +12,10 @@ pygments: true
 title : Max's Blog
 tagline: Max's Blog
 author :
-  name : max
-  email : 657426795@qq.test
+  name : chaojie wang
+  email : 657426795@qq.com
   github : fword
-  twitter : dd
+  twitter : fword
   feedburner : dd
 
 # The production_url is only used when full-domain names are needed
