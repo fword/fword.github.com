@@ -19,14 +19,13 @@ tagline: Supporting tagline
 
 The theme should reference these variables whenever needed.
     
-## Recently Posts
 
-{% for post in site.posts %}
-- ### [{{ post.title }}]({{ post.url }}) <time>{{ post.date | date: '%Y-%m-%d'}}</time>
-
-  {{post.summary}}
-
-  [Reading more]({{ post.url }})
+<ul class="posts">
+  {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; 
+	<a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
 {% endfor %}
 
 
