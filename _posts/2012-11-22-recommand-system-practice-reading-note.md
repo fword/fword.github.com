@@ -65,7 +65,7 @@ similarity(A,e)=similarity(A,C)*similarity(C,e) similarity(A,D)*similarity (D,e)
 
 再一个就是关于LFM的东西，这个东西和矩阵分解有着千丝万缕的关系，包括SVD什么的，由于实在没有时间，我这里就简单截个书中的图，看公式也很容易理解，等日后在写个矩阵分解的专题。
 
-![33](/assets/images/2012/11/33.jpg)
+<img src="/assets/images/2012/11/33.jpg" width="700" height="525">
 
 此外，书中还有几章关于冷启动，用户标签，上下文信息，社交网络数据的内容，个人感觉营养不高，所以这里不在记录，不过作为小品文，算是对推荐系统的一个了解也是很不错的。
 

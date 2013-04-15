@@ -26,38 +26,41 @@ My program could deal with all this stuff and return the success socket,otherwis
 in the recv_msg thread
 
     ret = recvfrom(sk, &ack, sizeof(ack), 0, (struct sockaddr *)&mote, &slen);
-    	if(ret>0)
-    	{
-    		printf( "get connected %s:%d...n", inet_ntoa(mote.sin_addr),mote.sin_port );
-    		if(num==ack 1)
-    			return sk;
-    		else
-    		{
-    			ack_back=ack 1;
-    			if(sendto(sk, &ack_back,sizeof(ack_back),0,(const struct sockaddr*)&mote, sizeof(struct sockaddr)) == -1)
-    			{
-    				perror("recv_msg sendto error");
-    				return -1;
-    			}
-    			printf( "send to %s:%d...n", inet_ntoa(mote.sin_addr),mote.sin_port );
-    			return sk;
-    		}
-    	}
+    if(ret>0)
+    {
+    	printf( "get connected %s:%d...n", inet_ntoa(mote.sin_addr),mote.sin_port );
+    	if(num==ack 1)
+    		return sk;
     	else
-    		return -1;
+    	{
+    		ack_back=ack 1;
+    		if(sendto(sk, &ack_back,sizeof(ack_back),0,(const struct sockaddr*)&mote, sizeof(struct sockaddr)) == -1)
+    		{
+    			perror("recv_msg sendto error");
+    			return -1;
+    		}
+			printf( "send to %s:%d...n", inet_ntoa(mote.sin_addr),mote.sin_port );
+			return sk;
+    	}
+    }
+    else
+    	return -1;
 
 and in nat_msg(char ip,char* port,int pnum)
 
     pthread_create(&tid,NULL,(void*)&recv_msg,(void*)angs);
-    	for(i=0;i		if(sendto(client_sk, &pnum, sizeof(pnum),0,(const struct sockaddr*)&remote, sizeof(struct sockaddr)) == -1)
-    		{
-    			perror("sendto error");
-    			return -1;
-    		}
-    		printf( "send to %s:%d...n", inet_ntoa(remote.sin_addr),remote.sin_port );
-    		sleep(10);
+    for(i=0;i<5;i++)	
+	{
+		if(sendto(client_sk, &pnum, sizeof(pnum),0,(const struct sockaddr*)&remote, sizeof(struct sockaddr)) == -1)
+    	{
+    		perror("sendto error");
+    		return -1;
     	}
-    	pthread_join(tid,&val);
-    	return (int)val;
+    	printf( "send to %s:%d...n", inet_ntoa(remote.sin_addr),remote.sin_port );
+    	sleep(10);
+    }
+    pthread_join(tid,&val);
+    return (int)val;
 
-[reference](http://michankong.blog.51cto.com/1464983/761270 )
+	
+*[reference]*(http://michankong.blog.51cto.com/1464983/761270 )

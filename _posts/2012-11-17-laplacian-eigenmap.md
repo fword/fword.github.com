@@ -23,7 +23,7 @@ categories: Machine learning
 
 其中W是原始空间中，点x之间的权值，如果点越近，则相应的权值W越大，y是降维之后空间的点。这个公式就保证了降维后，点之间的位置关系与原空间的位置关系尽量一致。进而有如下的推导,
 
-![31](/assets/images/2012/11/31.jpg)
+<img src="/assets/images/2012/11/31.jpg" width="689" height="295">
 
 理解上面的推导你需要知道：
 
