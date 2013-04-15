@@ -7,7 +7,7 @@ tagline: Supporting tagline
 
 
 ![d](/assets/images/p.jpg)   
-
+<img src="/assets/images/p.jpg" width="700" height="432">
 
 
 
