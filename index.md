@@ -1,6 +1,6 @@
 ---
-layout: page
-title:  道冲而用之或不盈
+layout: post
+title: 道冲而用之或不盈
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
@@ -9,25 +9,17 @@ tagline: Supporting tagline
 
 ## Update Author Attributes
 
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
+
+		唯之與阿，相去幾何？美之與惡，相去若何？人之所畏，不可不畏。
+		荒兮，其未央哉！眾人熙熙，如享太牢，如春登台。我獨泊兮，其未兆；
+		沌沌兮，如嬰兒之未孩；儡儡兮，若無所歸。眾人皆有餘，而我獨若遺。
+		我愚人之心也哉，沌沌兮！俗人昭昭，我獨昏昏。俗人察察，我獨悶悶。
+		淡兮，其若海，望兮，若無止。眾人皆有以，而我獨頑似鄙。我獨異於
+		人，而貴食母。
 
 The theme should reference these variables whenever needed.
     
 ## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
 Here's a sample "posts list".
 
 <ul class="posts">
