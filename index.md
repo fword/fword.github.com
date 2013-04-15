@@ -1,9 +1,7 @@
 ---
-layout: page
-title: mceiba的个人博客
-head_title: 晨旭园
-description: |
-  屌丝的技术生涯
+layout: default
+title: 道冲而用之或不盈
+tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
