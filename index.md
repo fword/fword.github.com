@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: mceiba的个人博客
 head_title: 晨旭园
 description: |
