@@ -2,8 +2,7 @@
 title: 《推荐系统实战》读书笔记
 author: admin
 layout: post
-categories: data mining
-tags: [recommand]
+categories: data-mining
 ---
  
 
