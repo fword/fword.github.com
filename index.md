@@ -6,10 +6,12 @@ tagline: Supporting tagline
 {% include JB/setup %}
 
 
-![d](/assets/images/p.jpg)
+![d](/assets/images/p.jpg)   
 
-<img src="/assets/images/p.jpg" width="100" height="100">	
-	
+
+
+
+
 ## Recently Posts
 
 <ul class="posts">
