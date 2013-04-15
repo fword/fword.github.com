@@ -1,6 +1,6 @@
 ---
-layout: default
-title: 道冲而用之或不盈
+layout: page
+title: Hello World
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
