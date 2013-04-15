@@ -7,7 +7,7 @@ tagline: Supporting tagline
 
 
 
-## Update Author Attributes
+## What We See
 
 
 		唯之與阿，相去幾何？美之與惡，相去若何？人之所畏，不可不畏。
@@ -19,18 +19,15 @@ tagline: Supporting tagline
 
 The theme should reference these variables whenever needed.
     
-## Sample Posts
-Here's a sample "posts list".
+## Recently Posts
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+- ### [{{ post.title }}]({{ post.url }}) <time>{{ post.date | date: '%Y-%m-%d'}}</time>
 
-## To-Do
+  {{post.summary}}
 
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
+  [Reading more]({{ post.url }})
+{% endfor %}
+
 
 
