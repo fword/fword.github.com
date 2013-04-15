@@ -8,3 +8,4 @@ tags: []
 ---
 {% include JB/setup %}
 $f(x) = 3x + 7$ 
+\begin{equation} f(x)=3x+7,\sigma \end{equation}
