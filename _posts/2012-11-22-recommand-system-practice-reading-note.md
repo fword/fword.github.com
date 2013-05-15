@@ -31,15 +31,15 @@ categories:
 
 现在已经可以很容易的找到用户A的最相似的用户，那么实际操作中如何给A推荐物品呢。我们使用上图中的例子，选择K为3，选择Jaccard相似系数来表示相似度。由上图可知，离A最近的元素是B，C，D，然后A中没有的元素是c，e。则需要把这两个推荐给A，那么A与c的相似度与A与e的相似度哪个更高呢？
 
-similarity(A,c)=similarity(A,B)*similarity(B,c) similarity(A,D)*similarity (D,c)
+similarity(A,c)=similarity(A,B)*similarity(B,c)+similarity(A,D)*similarity (D,c)
 
-                     =1/4 *1 1/5*1
+                     =1/4 *1+1/5*1
 
                      =9/20
 
-similarity(A,e)=similarity(A,C)*similarity(C,e) similarity(A,D)*similarity (D,e)
+similarity(A,e)=similarity(A,C)*similarity(C,e)+similarity(A,D)*similarity (D,e)
 
-                     =1/4 *1 1/5*1
+                     =1/4 *1+1/5*1
 
                      =9/20
 
