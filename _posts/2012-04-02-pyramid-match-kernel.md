@@ -6,7 +6,7 @@ layout: post
 categories:
   - Machine learning
 ---
-我们做 object recognizing时，bag of features（BOF）方法的效率给人留下深刻的印象。然而常用SVM的核函数往往用于固定长度的输入，并不适合这种无序的，长度不同的BOF的描述符输入。Kristen Grauman于2005年提出SPM核函数，这种把方法把feature投射到不同尺度的金字塔直方图上，然后计算出加权的histogram intersection。这种方法表现出令人信服的效率，之后人们又对它进行了进一步的改进。
+我们做 object recognizing时，bag of features（BOF）方法的效率给人留下深刻的印象。然而常用SVM的核函数往往用于固定长度的输入，并不适合这种无序的，长度不同的BOF的描述符输入。Kristen Grauman于2005年提出SPM核函数，这种把方法把feature投射到不同尺度的金字塔直方图上，然后计算出加权的histogram intersection。这种方法得到的结果很好，之后人们又对它进行了进一步的改进。
 
 本文并不尝试将英文的论文翻译于此，其中的细节见文末的附的两篇论文。这里我贴一些图片，并简要谈谈我的理解。
 
