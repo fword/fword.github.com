@@ -13,7 +13,7 @@ categories:
 让我们先来复习下特征值和特征向量的知识。
 
 
-    定义设A是n阶矩阵，若存在数及非零向量X，使得$AX=\lambda X,X≠0$则称是A的特征值，X是矩阵A属于特征值的特征向量。计算特征值的方法常由特征多项式|E-A|=0来求，求得后，带入原式便可求得特征向量。
+**定义设A是n阶矩阵，若存在数及非零向量X，使得$AX=\lambda X,X≠0$则称是A的特征值，X是矩阵A属于特征值的特征向量。计算特征值的方法常由特征多项式|E-A|=0来求，求得后，带入原式便可求得特征向量。**
 具体例子可以参考[这里](http://student.zjzk.cn/course_ware/web-gcsx/gcsx/chapter4/chapter4.1.htm)。	
      
 那么为什么要求特征值和特征向量呢，它有什么几何意义？观察$AX=\lambda X$会发现，矩阵A乘以向量X其实就是进行一次几何变换，这里A乘以X变换之后结果仍是X方向的向量，不同的只是长度上的伸缩。那么我们就可以这样认为，A乘以特征向量X之后，结果就是A在特征向量X上的投影。鉴于一个矩阵我们往往能求得不只一个特征向量，我们可以这样理解，其本质就是把矩阵A所代表的空间，进行正交分解，使得A的向量集合可以表示为每个向量在各个特征向量上面的投影，而特征值就投影的权重。就像我们在二维空间里分析几何问题，尝尝投影到x,y轴上一样，同样的道理。
@@ -51,6 +51,6 @@ categories:
 
 参考文章：
 
-[http://www.douban.com/group/topic/23708138/][1]
-[http://en.wikipedia.org/wiki/Corner_detection#The_Harris_.26_Stephens_.2F_Plessey_.2F_Shi-Tomasi_corner_detection_algorithm][2]
-[http://en.wikipedia.org/wiki/Harris_affine_region_detector][3]
+http://www.douban.com/group/topic/23708138/
+http://en.wikipedia.org/wiki/Corner_detection#The_Harris_.26_Stephens_.2F_Plessey_.2F_Shi-Tomasi_corner_detection_algorithm
+http://en.wikipedia.org/wiki/Harris_affine_region_detector
