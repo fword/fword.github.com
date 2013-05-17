@@ -53,5 +53,5 @@ categories:
 
 http://www.douban.com/group/topic/23708138/
 http://en.wikipedia.org/wiki/Corner_detection#The_Harris_.26_Stephens_.2F_Plessey_.2F_Shi-Tomasi_corner_detection_algorithm
-
+ass
 http://en.wikipedia.org/wiki/Harris_affine_region_detector
