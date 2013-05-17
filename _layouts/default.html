@@ -9,7 +9,8 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <script>
     MathJax.Hub.Config({
           tex2jax: {
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+		  inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+		  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
           }
     });
     MathJax.Hub.Queue(function() {
