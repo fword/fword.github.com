@@ -1,7 +1,6 @@
-auto: true
-permalink: /:title.html
-url: http://www.wangchaojie.tk/
-pygments: tue
-exclude: [Rakefile]
-img_url: http://fword.github.com/assets/images
-paginate: 5
+baseurl: http://yinwang.org
+permalink: /blog-cn/:year/:month/:day/:title
+markdown: rdiscount
+pygments: true
+date_format: "ordinal"
+subscribe_rss: /atom.xml
