@@ -1,6 +1,7 @@
 auto: true
 permalink: /:title.html
-url: http://shenfeng.me
+url: http://www.wangchaojie.tk/
 pygments: tue
-exclude: [scss, bin, Rakefile]
+exclude: [Rakefile]
+img_url: http://fword.github.com/assets/images
 paginate: 5
