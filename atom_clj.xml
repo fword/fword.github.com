@@ -14,9 +14,9 @@ layout: nil
    <email>shenedu@gmail.com</email>
  </author>
 
- {% for post in site.posts limit: 10 %}
+ {% for post in site.categories.clojure limit: 10 %}
  <entry>
-   <title>{{ post.title xml_escape }}</title>
+   <title>{{ post.title | xml_escape }}</title>
    <link href="{{ site.url }}{{ post.url }}" />
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.url }}{{ post.id }}</id>

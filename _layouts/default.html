@@ -1,6 +1,79 @@
----
-theme :
-  name : the-minimum
----
-{% include JB/setup %}
-{% include themes/the-minimum/default.html %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="shenfeng(沈锋)" />
+    <title>{{ page.title }} &raquo; A programmer's site </title>
+    {% include desc.html %}
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link rel="alternate" type="application/atom+xml"
+          title="Shenfeng's Blog" href="{{site.url}}/atom.xml">
+  </head>
+  <body>
+    <div id="page-wraper">
+      <div id="head" class="clearfix">
+        <div class="content">
+          <a href="/atom.xml" id="rss-icon">
+            <img id="rss-icon" src="/imgs/200px-Feed-icon.svg.png"/>
+          </a>
+          <h1><a href="/">A programmer's site</a></h1>
+          <p class="subtitle">点点滴滴：生活，技术</p>
+        </div>
+      </div>
+      <div class="clearfix" id="main">
+        <div id="content">{{ content }}</div>
+        <div id="side-bar">
+          <h3>Links:</h3>
+          <ul>
+            <li>
+              <a href="http://http-kit.org" target="_blank"
+                 title="High performance web server and client for clojure" style="color: #d00">
+                http-kit, HTTP client & server for Clojure</a>
+            </li>
+            <li>
+              <a href="http://rssminer.net/" target="_blank"
+                 title="an intelligent rss reader" style="color: #d00">
+                RSS miner, an intelligent reader</a>
+            </li>
+            <li><a href="https://trakrapp.com/" target="_blank"
+                   title="our proud product, an awesome issue
+                          tracking system">
+                Trakr, issue tracking reinvented</a></li>
+            <li>
+              <a href="http://dict.shenfeng.me" target="_blank"
+                 title="a simple and easy to use english-english dictionary">
+                English-English dictionary</a>
+            </li>
+            <li>
+              <a href="http://meiweisq.com">美味书签</a>
+            </li>
+            <li>
+              <a href="http://meiwei.fm">美味集</a>
+            </li>
+          </ul>
+          <h3>Recent:</h3>
+          <ul id="rencents">
+            {% for post in site.posts %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div id="footer" class="clearfix">
+        <div class="content">
+          <p class="copyright"> &copy;2013 &ndash; Feng Shen </p>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/atom.xml">Subscribe</a></li>
+            <li>
+              <a href="https://github.com/shenfeng/shenfeng.me">Code</a>
+            </li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/resume/index.html">Resume</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
