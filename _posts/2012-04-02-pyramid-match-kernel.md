@@ -11,7 +11,6 @@ categories:
 本文并不尝试将英文的论文翻译于此，其中的细节见文末的附的两篇论文。这里我贴一些图片，并简要谈谈我的理解。
 
 <img src="/assets/images/2012/4/1.png" width="699" height="488">
-         
 所谓的match，其实match的是两个图片描述符，计算其similarity，以此进行classification或recognizing。普通的BOF方法就是：首先用sift描述符描绘图像的interest of region，然后进行聚类，得到具有索引的dictionary，从而建立起直方图的描述符便具有了识别一个物体的功能。
 
 那么spm方法的优势在哪里呢？观察上图你会发现，普通的BOF方法在计算similarity时只是在一个尺度上计算的，而spm是将一个描述符映射到不同的尺度空间，然后计算上个尺度和本尺度的相关的差值，最后求的是把这些差值加权的值，无疑直观上讲，后者的准确性会比普通的BOF好，同时实验也证明了同样的结论。
@@ -30,8 +29,7 @@ categories:
 
 参考资料：
 
-* K. Grauman and T. Darrell. The Pyramid Match Kernel: Discriminative Classification with Sets of Image Features, ICCV 2005.  
-* Beyond Bags of Features: Spatial Pyramid Matching for Recognizing Natural Scene Categories. S. Lazebnik, C. Schmid, and J. Ponce. CVPR 2006
-
-* http://videolectures.net/nips05\_grauman\_elsf/
+K. Grauman and T. Darrell. The Pyramid Match Kernel: Discriminative Classification with Sets of Image Features, ICCV 2005.  
+Beyond Bags of Features: Spatial Pyramid Matching for Recognizing Natural Scene Categories. S. Lazebnik, C. Schmid, and J. Ponce. CVPR 2006
+http://videolectures.net/nips05\_grauman\_elsf/
 
