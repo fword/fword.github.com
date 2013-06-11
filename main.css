@@ -64,6 +64,7 @@ pre {
     border: solid 1px #CC929A;
     background-color: Ivory;
     padding: 5px;
+	overflow: auto;
     line-height: 130%;
     margin-left: 10px;
     width: 95%;
