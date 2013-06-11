@@ -1,4 +1,4 @@
-baseurl: http://fword.github.io
+baseurl: http://www.wangchaojie.tk
 permalink: /:year/:month/:day/:title
 markdown: rdiscount
 pygments: true
