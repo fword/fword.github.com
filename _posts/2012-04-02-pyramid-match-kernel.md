@@ -1,7 +1,7 @@
 ---
 title: Pyramid Match Kernel理解
 author: admin
-layout: default
+layout: post
 
 categories:
   - Machine learning

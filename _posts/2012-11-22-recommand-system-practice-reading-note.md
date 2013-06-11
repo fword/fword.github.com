@@ -1,7 +1,7 @@
 ---
 title: 《推荐系统实战》读书笔记
 author: admin
-layout: default
+layout: post
 categories: 
   - data mining
 ---

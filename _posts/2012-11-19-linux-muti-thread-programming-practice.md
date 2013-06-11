@@ -1,7 +1,7 @@
 ---
 title: linux环境多线程编程同步实践
 author: admin
-layout: default
+layout: post
 categories:
   - develop
 ---
