@@ -16,9 +16,8 @@ categories:
 
 我们来看使用普通的条件概率来解决这个问题，我们定义C事件为参赛者打开这个门选择到一个车，定义S事件为主持人打开另一扇门选择一只羊，则
 
-**C事件：参赛者选中一个车。那么P(C)=1/3**
-
-**S事件：主持人选中一个羊。那么P(S)=1**
+C事件：参赛者选中一个车。那么P(C)=1/3  
+S事件：主持人选中一个羊。那么P(S)=1
 
 由于主持人始终知道哪个门后有羊，所以选择羊的概率是1。
 
@@ -26,7 +25,7 @@ categories:
 
 所以关键在于求P(C∩S)，即参赛者选中一个车时，主持人选中一个羊的概率。下图是所有选择的可能：
 
-<table border="1" cellspacing="0" cellpadding="0" align="center">
+<table border="1" cellspacing="0" cellpadding="0" align="center" bgcolor="Ivory">
 <tbody>
 <tr>
 <td align="center" valign="middle" width="189">参赛者</td>

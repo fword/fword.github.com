@@ -27,7 +27,7 @@ categories: Machine learning
 
 理解上面的推导你需要知道：
 
-1. Dii和Djj分别是W的每行和每列元素和的对角矩阵，由于W是对称矩阵，所以Dii与Djj相等。
+1. $D_ii$和$D_jj$分别是W的每行和每列元素和的对角矩阵，由于W是对称矩阵，所以Dii与Djj相等。
 
 2. 线性代数里的二次型，y’Wy的展开式。
 
