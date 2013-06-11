@@ -1,4 +1,4 @@
-baseurl: http://yinwang.org
+baseurl: http://fword.github.io/
 permalink: /blog-cn/:year/:month/:day/:title
 markdown: rdiscount
 pygments: true
