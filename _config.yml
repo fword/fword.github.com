@@ -1,6 +1,6 @@
 baseurl: http://www.wangchaojie.tk
 permalink: /:year/:month/:day/:title
-markdown: rdiscount
+
 pygments: true
 date_format: "ordinal"
 subscribe_rss: /atom.xml
