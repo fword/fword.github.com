@@ -37,7 +37,7 @@ similarity(A,c)=similarity(A,B)\*similarity(B,c)+similarity(A,D)\*similarity (D,
 
                      =9/20
 
-similarity(A,e)=similarity(A,C)*similarity(C,e)+similarity(A,D)*similarity (D,e)
+similarity(A,e)=similarity(A,C)\*similarity(C,e)+similarity(A,D)\*similarity (D,e)
 
                      =1/4 \*1+1/5\*1
 
