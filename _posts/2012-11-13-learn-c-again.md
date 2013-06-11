@@ -1,7 +1,7 @@
 ---
 title: 重新学习c语言
 author: admin
-layout: post
+layout: default
 categories: develop
 ---
 

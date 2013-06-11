@@ -1,7 +1,7 @@
 ---
 title: 三个概率问题
 author: admin
-layout: post
+layout: default
 categories:
   - Mathematics
 ---

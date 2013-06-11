@@ -1,7 +1,7 @@
 ---
 title: 特征向量与协方差的应用
 author: admin
-layout: post
+layout: default
 categories:
   - Machine learning
 ---

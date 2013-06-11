@@ -1,7 +1,7 @@
 ---
 title: 寻找环的起点
 author: admin
-layout: post
+layout: default
 categories:
   - Mathematics
 ---

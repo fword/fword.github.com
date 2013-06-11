@@ -1,7 +1,7 @@
 ---
 title: Laplacian Eigenmap和 Spectral Clustering学习笔记
 author: admin
-layout: post
+layout: default
 categories: Machine learning
 ---
 

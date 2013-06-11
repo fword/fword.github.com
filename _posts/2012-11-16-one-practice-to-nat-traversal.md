@@ -1,7 +1,7 @@
 ---
 title: One Practice To NAT Traversal
 author: admin
-layout: post
+layout: default
 categories:
   - develop
 ---

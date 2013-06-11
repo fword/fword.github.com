@@ -1,7 +1,7 @@
 ---
 title: UNIX网络编程读书笔记
 author: admin
-layout: post
+layout: default
 category: develop
 tags: [unix network]
 ---
