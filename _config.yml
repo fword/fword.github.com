@@ -3,3 +3,5 @@ permalink: /:year/:month/:day/:title
 pygments: true
 date_format: "ordinal"
 subscribe_rss: /atom.xml
+comments :
+  provider : false
