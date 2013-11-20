@@ -3,7 +3,6 @@ layout: post
 title: "精确表达浮点数"
 description: ""
 category: - Mathematics
-tags: []
 ---
 
 前段时间看《编程之美》，看到一个问题“如何精确表示浮点数”。看了一下书中的解答，感觉有问题，贴出来给大家看下
