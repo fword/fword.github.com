@@ -27,7 +27,7 @@ categories:
 
 > 2(m+k+a\*c)=m+k+b\*c
 > 
-> =》m+k=c\*(b-2a)
+> m+k=c\*(b-2a)
 
 其中b-2a是整数，我们可以将公式写成
 
