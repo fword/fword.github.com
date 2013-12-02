@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "精确表达浮点数"
-description: ""
-category: - Mathematics
+category: 
+   -Mathematics
 tags: []
 ---
 
