@@ -32,11 +32,12 @@ category:
 COEFF是X矩阵所对应的协方差阵V的所有特征向量组成的矩阵，即变换矩阵或称投影矩阵。(principal component coefficients)   
 SCORE是对主分的打分，也就是说原X矩阵在主成分空间的表示。( the principal component scores)  
 LATENT协方差矩阵的特征值。(a vector containing the eigenvalues of the covariance matrix of X.)   
-详见:[matlab官网][2]  
 用原矩阵x\*coeff(:,1:n)就是新数据，其中的n是想降到多少维。具体要降到多少维度，需要看自己的需求，具体可以根据LATENT矩阵来判断
 >percent = 100\*latent/sum(latent(:,1:n));
 
 一般的话，当percent达到90%以上我们认为属于符合要求的。
+
+详见:[matlab官网][2]  
 
   [1]: http://blog.csdn.net/ybdesire/article/details/6270328
   [2]: http://www.mathworks.cn/cn/help/stats/princomp.html
