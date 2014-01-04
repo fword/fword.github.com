@@ -19,7 +19,8 @@ category:
 **LDA原理**  
 我们的目的是求解$u$，使得投影后类内方差尽量小，类间的方差尽量大。  
 \begin{equation} Y=uX \end{equation}  
-其中X是R\*M的，Y是1\*M的，$u$是1*R的。我们可以从下面这张图片上直观上理解下它的目的：  
+其中X是R\*M的，Y是1\*M的，$u$是1*R的。我们可以从下面这张图片上直观上理解下它的目的： 
+![1](/assets/images/2014/pca_lda.gif) 
 而该问题是优化如下问题：  
 \begin{equation} \frac{u^TS_Bu}{u^TS_Wu} \end{equation}  
 同样由于不考虑w的大小，加入限制项后可得：  
