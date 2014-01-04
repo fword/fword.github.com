@@ -1,15 +1,49 @@
 ---
 layout: post
-title: PCA公式推倒以及在实验中的使用
+title: PCA和LDA理解以及在实验中的使用
 category: 
  - Machine Learning
 ---
 
 **PCA原理**  
-我们的目的是求解P，使得
-\begin{equation} Y=PX \end{equation}
-其中X是R\*M的，Y是R\*N的，其中M>N；这里其实就实现降维度的目的。  
-由于我们想要保留数据中那些方差最大的维度，所以首先要求[矩阵的协方差][1]，其计算方法是：  
+我们的目的是求解$u$，使得将X投影到最主要的成分上，即协方差最大的维度上。
+\begin{equation} Y=uX \end{equation}
+其中X是R\*M的，Y是1\*M的，$u$是1*R的。   
+最后其实就是优化如下问题：
+\begin{equation} u^TSu+\lambda(1-u^Tu) \end{equation}   
+其中$S$是X的协方差，然后根据凸属性，令偏导等于0，可得  
+\begin{equation} Su=\lambda u \end{equation}
+我们选取$S$的最大的特征向量就是$u_1$。如果想保留其他的维度，可以依次保留其特征向量。  
+我这里省略PCA大部分的推导过程，详情参考PRML12.1 p561，或者[这里][1]。  
+
+**LDA原理**  
+我们的目的是求解$u$，使得投影后类内方差尽量小，类间的方差尽量大。  
+\begin{equation} Y=uX \end{equation}  
+其中X是R\*M的，Y是1\*M的，$u$是1*R的。我们可以从下面这张图片上直观上理解下它的目的：  
+而该问题是优化如下问题：  
+\begin{equation} \frac{u^TS_Bu}{u^TS_Wu} \end{equation}  
+同样由于不考虑w的大小，加入限制项后可得：  
+\begin{equation} S_W^{-1}S_Bu=\lambda u\end{equation}    
+则对$S_W^{-1}S_B$求特征向量就可以得到$u$。 求出$u$之后就可以将原来标注的数据分别映射到这个线性空间中，然后把需要分类的数据也映射过去，看离哪个类的中心近就分到哪个类。这也就是为什么LDA是supervised learning.
+
+详细推导步骤参考PRML4.1.4 P186，或者[这里][2]  
+
+**补充1**  
+这里提一下二类的$S_B$和多类的$S_B$是不一样的，二类的$S_B$是：
+\begin{equation} S_B=(m_1-m_2)(m_1-m_2)^T \end{equation}  
+其中$m_i$表示X中类i的均值。由于$m_1-m_2$是行向量， $u$也是行向量，则$(m_1-m_2)^Tu$是个scalar。
+
+\begin{equation} S_W^{-1}S_Bu=S_W^{-1}c(m_1-m_2)=\lambda u\end{equation}    
+
+则可以直接求出u为  
+\begin{equation} u=S_W^{-1}(m_1-m_2) \end{equation}  
+多类的$S_B$的计算方式是
+\begin{equation} S_B=\sum_{k=1}^KN_{k}(m_k-m)(m_k-m)^T\end{equation}  
+其中$N_k$ 表示第k类内元素的总数,$m_k$表示第k类内元素的均值，$m$表示所有元素的均值。这个式子的来历是，类间的方差等于所有方差减去类内方差:
+\begin{equation} S_{all}-S_W=\sum_{n=1}^N(x_n-m)(x_n-m)^T-\sum_{k=1}^KS_k\end{equation}  
+
+**补充2**   
+关于求[矩阵的协方差][3]，其计算方法是：  
 >协方差(i,j)=（第i列的所有元素-第i列的均值）\*（第j列的所有元素-第j列的均值）  
 
 所以求矩阵的的协方差可以先将样本进行中心化，然后乘以其转置矩阵。则X的协方差为  
@@ -17,16 +51,10 @@ category:
 同理：
 \begin{equation} S_y=\frac{1}{n-1}YY^T \end{equation}
 则：
-\begin{equation} S_y=\frac{1}{n-1}(PX)(PX)^T =\frac{1}{n-1}PXX^TP^T=PS_xP^T\end{equation}
-由于$S_x$是对称矩阵，所以可以将$S_x$进行正交分解:
-\begin{equation} \Lambda=E S_xE^T \end{equation}
+\begin{equation} S_y=\frac{1}{n-1}(uX)(uX)^T =\frac{1}{n-1}uXX^Tu^T=uS_xu^T\end{equation}
+ 
 
-我们可以想象一下，其实P和E是相等的。P的目的其实就是将$S_x$投影到几个主维度上去，而E的作用也是一样的。具体证明方法可以采用：  
-由于$S_y$是投影后的矩阵，所有它的各个维度间的协方差基本为0。则： 
-\begin{equation} S_y=\frac{1}{n-1}YY^T =\Lambda \end{equation}
-所以在实际操作中，求出矩阵协方差后，直接进行正交分解，得到特征向量矩阵P。根据PX就可以得到降维后的矩阵。  
-
-**PCA在matlab中使用**  
+**在matlab中使用PCA**  
 >[COEFF,SCORE,latent] = princomp(X)
 
 COEFF是X矩阵所对应的协方差阵V的所有特征向量组成的矩阵，即变换矩阵或称投影矩阵。(principal component coefficients)   
@@ -37,7 +65,18 @@ LATENT协方差矩阵的特征值。(a vector containing the eigenvalues of the 
 
 一般的话，当percent达到90%以上我们认为属于符合要求的。
 
-详见:[matlab官网][2]  
+详见:[matlab官网][4]    
 
-  [1]: http://blog.csdn.net/ybdesire/article/details/6270328
-  [2]: http://www.mathworks.cn/cn/help/stats/princomp.html
+**在matlab中使用LDA**  
+>class = classify(sample,training,group)  
+
+sample是需要分类的数据，training是训练的数据，group是分组信息，class是预测的标签。由此可见sample必须和training有相同的列数，因为维度必须相同。training和group必须行数相同，因为每个元素要分一类。
+
+详见：[matlab官网][5]
+
+
+  [1]: http://www.cnblogs.com/Leftnoteasy/archive/2011/01/08/lda-and-pca-machine-learning.html
+  [2]: http://www.cnblogs.com/jerrylead/archive/2011/04/21/2024384.html
+  [3]: http://blog.csdn.net/ybdesire/article/details/6270328
+  [4]: http://www.mathworks.cn/cn/help/stats/princomp.html
+  [5]: http://www.mathworks.cn/cn/help/stats/classify.html
