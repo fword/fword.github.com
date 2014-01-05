@@ -1,11 +1,11 @@
 ---
 layout: post
-title: adaboost与人脸检测
+title: Adaboost与人脸检测
 category: 
  - Machine Learning
 ---
 
-**adaboost**  
+**Adaboost**  
 所谓boosting方法就是结合多个弱分类器，形成一个强分类器的方法。adaboost是其中一种，全名adaptive boosting。其目的是学习各个弱分类器的权重$\alpha_m$
 \begin{equation}Y_M(x)=sign(\sum_{m=1}^M\alpha_my_m(x))  \end{equation}
 其中$y_m()$是第m个弱分类器，$Y_M()$是最后学习到的分类器。直观上我们可以这样考虑，对于好的弱分类器，权重就大，不好的分类器，权重就小。如果用$\epsilon$表示错误率的话，可以想象$\alpha_m$应该是和$\epsilon_m$是一个反比的关系。那么上一个分类器结果如何影响下一个分类器的权重呢，这就是策略问题。adaboot采用的是把每一个样本赋一个权值，最优化分错样本的权值比，如果本次分类把某个点分错了，就把分错点的权值增大。  
