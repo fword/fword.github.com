@@ -21,6 +21,6 @@ harr-like特征就不多说了，wiki里很清楚。说说我对cascade的理解
 ![3](/assets/images/2014/cascade.png)  
 
 
-  [1]: Viola%E2%80%93Jones%20object%20detection%20framework
+  [1]: http://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework
   [2]: http://en.wikipedia.org/wiki/Haar-like_features
   [3]: http://en.wikipedia.org/wiki/Summed_area_table
