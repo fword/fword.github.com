@@ -8,18 +8,18 @@ category:
 **PCA原理**  
 我们的目的是求解$u$，使得将X投影到最主要的成分上，即协方差最大的维度上。
 \begin{equation} Y=uX \end{equation}
-其中X是R\*M的，Y是1\*M的，$u$是1*R的。   
+其中X是R\*M的，Y是1\*M的，$u$是1\*R的。   
 最后其实就是优化如下问题：
 \begin{equation} u^TSu+\lambda(1-u^Tu) \end{equation}   
 其中$S$是X的协方差，然后根据凸属性，令偏导等于0，可得  
 \begin{equation} Su=\lambda u \end{equation}
 我们选取$S$的最大的特征向量就是$u_1$。如果想保留其他的维度，可以依次保留其特征向量。  
-我这里省略PCA大部分的推导过程，详情参考PRML12.1 p561，或者[这里][1]。  
+我这里省略PCA大部分的推导过程，详情参考PRML12.1 p561，或者[这里][1]。
 
 **LDA原理**  
 我们的目的是求解$u$，使得投影后类内方差尽量小，类间的方差尽量大。  
 \begin{equation} Y=uX \end{equation}  
-其中X是R\*M的，Y是1\*M的，$u$是1*R的。我们可以从下面这张图片上直观上理解下它的目的： 
+其中X是R\*M的，Y是1\*M的，$u$是1\*R的。我们可以从下面这张图片上直观上理解下它的目的： 
 ![1](/assets/images/2014/pca_lda.gif) 
 而该问题是优化如下问题：  
 \begin{equation} \frac{u^TS_Bu}{u^TS_Wu} \end{equation}  
